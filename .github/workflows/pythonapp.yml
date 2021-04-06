@@ -31,7 +31,9 @@ jobs:
         with:
           python-version: 3.9
       - name: Install dependencies
-        run:  make install
+        run:  |
+          echo "{path}"
+          make install
         working-directory: /Hello_Python_App
           
       - name: Lint with pylint

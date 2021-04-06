@@ -33,14 +33,14 @@ jobs:
      
       - name: Install dependencies
         run:  make install
-        working-directory: $BUILD_DIR
+        working-directory: env.BUILD_DIR
           
       - name: Lint with pylint
         run:  make lint
-        working-directory: $BUILD_DIR
+        working-directory: env.BUILD_DIR
 
       - name: Test with pytest
         run:  make test
-        working-directory: $BUILD_DIR
+        working-directory: env.BUILD_DIR
 
 

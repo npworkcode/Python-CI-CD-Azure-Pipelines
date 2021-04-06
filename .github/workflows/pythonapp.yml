@@ -32,7 +32,7 @@ jobs:
           python-version: 3.9
       - name: Install dependencies
         run:  make install
-        working-directory: ./Hello_Python_App
+        working-directory: /Hello_Python_App
           
       - name: Lint with pylint
         run:  |

@@ -32,19 +32,16 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: List of the GitHub Actions environment variables on ubuntu
-        run: env
-     
       - name: Install dependencies
         run:  make install
         working-directory: ${{env.BUILD_DIR}}
           
       - name: Lint with pylint
         run:  make lint
-        working-directory: env.BUILD_DIR
+        working-directory: ${{env.BUILD_DIR}}
 
       - name: Test with pytest
         run:  make test
-        working-directory: env.BUILD_DIR
+        working-directory: ${{env.BUILD_DIR}}
 
 

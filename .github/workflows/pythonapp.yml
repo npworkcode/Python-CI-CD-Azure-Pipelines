@@ -31,8 +31,11 @@ jobs:
         with:
           python-version: 3.9
       - name: Display the path
-        run: echo $PATH
-        shell: bash
+        run: |
+          echo $PATH
+          echo $GITHUB_EVENT_PATH
+          echo $GITHUB_WORKSPACE
+        
 
       - name: Install dependencies
         run:  make install

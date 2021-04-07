@@ -1,5 +1,6 @@
 setup:
-	py3 -m venv ~/.avenv
+	py -3 -m venv ~/.avenv
+	source ~/.avenv/scripts/activate
 
 install:
 	pip install --upgrade pip &&\

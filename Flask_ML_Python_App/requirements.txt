@@ -1,4 +1,4 @@
-Flask
-pandas
-scikit-learn
-locust
+Flask==1.1.2
+pandas==1.2.0
+scikit-learn==0.24.0
+locust==1.4.4

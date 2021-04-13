@@ -1,12 +1,12 @@
 setup:
-	python3 -m venv ~/.udacity-devops
+	py -3 -m venv ~/.avenv
 
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
 test:
-	#python -m pytest -vv --cov=myrepolib tests/*.py
+	python -m pytest -vv -W ignore::DeprecationWarning --cov=app test*.py
 	#python -m pytest --nbval notebook.ipynb
 
 

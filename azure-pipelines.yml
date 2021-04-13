@@ -53,6 +53,7 @@ stages:
       displayName: 'Use Python $(pythonVersion)'
 
     - script: |
+        echo $(projectRoot)
         python -m venv antenv
         source antenv/bin/activate
         make install

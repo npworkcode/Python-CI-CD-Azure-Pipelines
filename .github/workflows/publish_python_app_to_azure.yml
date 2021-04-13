@@ -1,0 +1,53 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Python App CI CD to Azure App Service
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: 
+      - main 
+    paths:
+      - 'Flask_ML_Python_App-GitHub_Actions'
+      - '!Hello_Python_App/**'
+      - '!Flask_ML_Python_App/**'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: "python04152021-ml-project2" # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: './Flask_ML_Python_App-GitHub_Actions' # set this to the path to your web app project, defaults to the repository root
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+        
+    - name: Install dependencies
+      run:  make install
+      working-directory: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}
+          
+    - name: Lint with pylint
+      run:  make lint
+      working-directory: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}
+
+    - name: Test with pytest
+      run:  make test
+      working-directory: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}
+        
+    - name: Building web app
+      uses: azure/appservice-build@v2
+    - name: Deploy web App using GH Action azure/webapps-deploy
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}

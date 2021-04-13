@@ -36,7 +36,9 @@ jobs:
       working-directory: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}
           
     - name: Lint with pylint
-      run:  make lint
+      run:  |
+        pip install pylint
+        make lint
       working-directory: ${{env.AZURE_WEBAPP_PACKAGE_PATH}}
 
     - name: Test with pytest

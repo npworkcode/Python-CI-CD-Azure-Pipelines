@@ -48,7 +48,7 @@ Demonstrate Continuous Integration with a Python App in folder **/Hello_Python_A
 ### Successful deploy of Flask ML Python App to Azure App Service
 ![Successful deployment to Azure](./images/09-succesful_deploy_of_python_app_using_github_actions.jpg)
 
-![Make prediction using Flask ML Python App](./images/06-make_prediction_fun_against_azure_website_with_deployed_app.jpg)
+![Make prediction using Flask ML Python App](./images/06-make_prediction_run_against_azure_website_with_deployed_app.jpg)
 
 ## Load Test Deployed App with Locust
 

@@ -8,10 +8,10 @@
 3) [x] Project 3 - located in folder **/Flask_ML_Pyhton_App-GitHub_Actions** demonstrates CI and CD using GitHub Actions
 
 ### Architectural Diagram
-[![Architectural Diagram using Visual Studio Code, GitHub and Azure](/architecture/images/project2_architectural_diagram.jpg)]
+[![Architectural Diagram using Visual Studio Code, GitHub and Azure]](./architecture/images/project2_architectural_diagram.jpg)
 
 ### Project Plan
-[Yearly, Quarterly Project Plan for CI-CD Project](/project_plan/Q1-2021.xlsx)
+[Yearly, Quarterly Project Plan for CI-CD Project](./project_plan/Q1-2021.xlsx)
 
 ### Trello Board
 [Project's Trello Board](https://trello.com/b/KuYAsEet/project-2)

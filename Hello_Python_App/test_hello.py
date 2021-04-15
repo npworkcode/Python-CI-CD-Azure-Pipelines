@@ -8,9 +8,7 @@ def teardown_function(function):
     print("Running Teardown: %s" % function.__name__)
     del function.x
 
-### Run to see failed test
-# def test_hello_add():
-#   assert add(test_hello_add.x) == 12
+### Test 1 function
 
-def test_hello_subtract():
-    assert subtract(test_hello_subtract.x) == 9
+def test_toyou():
+    assert toyou(test_toyou.x) == "hi 10"

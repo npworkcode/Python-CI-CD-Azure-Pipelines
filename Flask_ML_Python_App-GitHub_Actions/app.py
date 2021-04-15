@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 
-# logging.basicConfig(filename='applog.txt', filemode='a')
+logging.basicConfig(filename='applog.txt', filemode='a')
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 

@@ -20,13 +20,13 @@
 Demonstrate Continuous Integration with a Python App in folder **/Hello_Python_App**
 
 ### Clone the repository using GitBash
-[Cloned Respository for /Hello_Python_App](/images/01-git_repository_cloned_in_gitbash_to_local_repository.jpg)
+![Cloned Respository for /Hello_Python_App](./images/01-git_repository_cloned_in_gitbash_to_local_repository.jpg)
 
 ### Execute make all on local computer
-[Output for **make all** command on local computer](/images/02-make_all_output.jpg)
+![Output for **make all** command on local computer](./images/02-make_all_output.jpg)
 
 ### GitHub Action Workflow for Project 1
-[Output for **GitHub Action** executes make all on GitHub](/images/03-github_action_build.jpg)
+![Output for **GitHub Action** executes make all on GitHub](./images/03-github_action_build.jpg)
 
 [![Python application CI test with Github actions](https://github.com/npworkcode/Python-CI-CD-Azure-Pipelines/actions/workflows/pythonapp.yml/badge.svg)](https://github.com/npworkcode/Python-CI-CD-Azure-Pipelines/actions/workflows/pythonapp.yml)
 

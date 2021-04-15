@@ -71,7 +71,7 @@ locust -f locusApp.py
 ![Locust load testing the python app](./images/07-locust_load_testing_of_app_on_azure_websites.jpg)
 
 ### Locust load testing report
-![Locust report](./locust/images/report_1618320165.2787147.html)
+![Locust report](./locust/images/locust_report.jpg)
 ## Demo
 [Youtube link to demo of project]
 

@@ -34,7 +34,7 @@ Demonstrate Continuous Integration with a Python App in folder **/Hello_Python_A
 
 ### Deploy the Python App to Azure App Service from Powershell
 ### Project located in folder **/Flask_ML_Python_App**
-[Successful Deployment of Python App](/images/05-successful_deployment_of_python_app_to_azure_from_command_line.jpg)
+![Successful Deployment of Python App](./images/05-successful_deployment_of_python_app_to_azure_from_command_line.jpg)
 
 ### Unable to perform CI - CD with Azure Pipelines
 - Waiting for approval from Microsoft for my Azure DevOps organisation to use Service agent for Azure Pipeline
@@ -46,9 +46,9 @@ Demonstrate Continuous Integration with a Python App in folder **/Hello_Python_A
 ### Located in folder **/Flask_ML_Python_App-GitHub_Actions
 
 ### Successful deploy of Flask ML Python App to Azure App Service
-[Successful deployment to Azure](/images/09-succesful_deploy_of_python_app_using_github_actions.jpg)
+![Successful deployment to Azure](./images/09-succesful_deploy_of_python_app_using_github_actions.jpg)
 
-[Make prediction using Flask ML Python App] (/06-make_prediction_fun_against_azure_website_with_deployed_app.jpg)
+![Make prediction using Flask ML Python App] (./06-make_prediction_fun_against_azure_website_with_deployed_app.jpg)
 
 ## Load Test Deployed App with Locust
 
@@ -62,15 +62,15 @@ pip install locust
 locust -f locusApp.py
 ```
 ### Open a Web browser to http://localhost:8089
-[Locust start page](/images/08-locust_start_new_load_test.jpg)
+![Locust start page](./images/08-locust_start_new_load_test.jpg)
 
 1) The number of users to simulate
 2) The spawn rate (number of users created per second)
 3) Enter the URL of the app https://python04152021-ml-project2.azurewebsites.net
 
-[Locust load testing the python app](/images/07-locust_load_testing_of_app_on_azure_websites.jpg)
+![Locust load testing the python app](./images/07-locust_load_testing_of_app_on_azure_websites.jpg)
 
-[Locust load testing report](./locust/images/report_1618320165.2787147.html)
+![Locust load testing report](./locust/images/report_1618320165.2787147.html)
 
 ## Demo
 [Youtube link to demo of project]

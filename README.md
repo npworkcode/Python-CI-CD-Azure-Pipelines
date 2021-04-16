@@ -45,6 +45,9 @@ Demonstrate Continuous Integration with a Python App in folder **/Hello_Python_A
 
 ### Located in folder **/Flask_ML_Python_App-GitHub_Actions**
 
+### Generate an Azure Publish profile in Azure Cloud Services and Configure the GitHub Secret
+https://docs.microsoft.com/en-us/azure/app-service/deploy-github-actions?tabs=applevel
+
 ### Successful deploy of Flask ML Python App to Azure App Service
 ![Successful deployment to Azure](./images/09-succesful_deploy_of_python_app_using_github_actions.jpg)
 
@@ -73,7 +76,7 @@ locust -f locusApp.py
 ### Locust load testing report
 ![Locust report](./locust/images/locust_report.jpg)
 ## Demo
-[Youtube link to demo of project]
+![Youtube link to demo of project] https://www.youtube.com/watch?v=qB16kKV-M_E
 
 ## Future Enhancements
 1) Deploy the app in a Docker Container and Automatically deploy to a Kubernetes Pod

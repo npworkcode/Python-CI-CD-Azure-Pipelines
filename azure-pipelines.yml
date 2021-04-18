@@ -39,7 +39,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-      ubuntuVMagent
+      Self-Hosted-Ubuntu-Agent
     steps:
     - task: UsePythonVersion@0
       inputs:

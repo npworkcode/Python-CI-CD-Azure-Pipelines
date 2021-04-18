@@ -4,7 +4,15 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- main
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - ./Flask_ML_Python_App-Azure_Pipelines/**.py
+    exclude:
+      - ./Flask_ML_Python_App-GitHub_Actions
+      - ./Hello_Python_App
 
 variables:
   # Azure Resource Manager connection created during pipeline creation
@@ -41,11 +49,28 @@ stages:
     - script: |
         python -m venv antenv
         source antenv/bin/activate
-        python -m pip install --upgrade pip
-        pip install setup
-        pip install -r requirements.txt
+        make install
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
+
+    - script: |
+        make lint
+      workingDirectory: $(projectRoot)
+      displayName: "Lint Python App with pylint"
+
+    - script: |
+        make test
+      workingDirectory: $(projectRoot)
+      displayName: "Test with pytest and code coverage"
+
+    - script: |
+        echo Deleting antenv
+        deactivate
+        rm -rf antenv
+      workingDirectory: $(projectRoot)
+      displayName: "Remove virtual environment before zip"
+
+
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'

@@ -4,7 +4,7 @@
 
 ### Repository consists of 3 Projects
 1) [x] Project 1 - located in folder **/Hello_Python_App** demonstrates CI using GitHub Actions
-2) [ ] Project 2 - located in folder **/Flask_ML_Python_App** demonstrates CI and CD using Azure Pipelines
+2) [x] Project 2 - located in folder **/Flask_ML_Python_App-Azure_Pipelines** demonstrates CI and CD using Azure Pipelines
 3) [x] Project 3 - located in folder **/Flask_ML_Pyhton_App-GitHub_Actions** demonstrates CI and CD using GitHub Actions
 
 ### Architectural Diagram
@@ -33,14 +33,24 @@ Demonstrate Continuous Integration with a Python App in folder **/Hello_Python_A
 ## Project 2
 
 ### Deploy the Python App to Azure App Service from Powershell
-### Project located in folder **/Flask_ML_Python_App**
+### Project located in folder **/Flask_ML_Python_App-Azure_Pipelines**
 ![Successful Deployment of Python App](./images/05-successful_deployment_of_python_app_to_azure_from_command_line.jpg)
 
-### Unable to perform CI - CD with Azure Pipelines
-- Waiting for approval from Microsoft for my Azure DevOps organisation to use Service agent for Azure Pipeline
+### Perform CI - CD with Azure Pipelines
+- Approval from Microsoft to use Service agent for Azure Pipeline
 > - https://devblogs.microsoft.com/devops/change-in-azure-pipelines-grant-for-private-projects/
 > - https://devblogs.microsoft.com/devops/change-in-azure-pipelines-grant-for-public-projects/
 
+![Azure Pipelines - Install Requirements](./images/10-azure_pipelines-install_requirements.jpg)
+
+![Azure Pipelines - Lint](./images/11-azure_pipelines-lint_requirements.jpg)
+
+![Azure Pipelines - Pytest](./images/12-azure_pipelines-pytest.jpg)
+
+![Azure Pipelines - Deploy](./images/13-azure_pipelines-deploy_app.jpg)
+
+### Demo of Project CI - CD using Azure Pipelines
+https://youtu.be/I9d_mYLev1g
 ## Project 3
 
 ### Located in folder **/Flask_ML_Python_App-GitHub_Actions**

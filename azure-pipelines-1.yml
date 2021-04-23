@@ -6,7 +6,7 @@
 trigger:
   branches:
     include:
-      - main
+    - main
   paths:
     include:
     - ./Flask_ML_Python_App-Azure_Pipelines/**.py
@@ -17,13 +17,13 @@ variables:
   azureServiceConnectionId: '499ba2de-e65f-4378-b2cd-a2739f905f7a'
 
   # Web app name
-  webAppName: 'python04152021-ml-project2'
+  webAppName: 'python04152021-ml-project'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'python04152021-ml-project2'
+  environmentName: 'python04152021-ml-project'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -53,7 +53,6 @@ stages:
       displayName: "Install requirements"
 
     - script: |
-        pip install pylint
         make lint
       workingDirectory: $(BUILD_DIR)
       displayName: "Lint with pylint"
@@ -62,14 +61,6 @@ stages:
         make test
       workingDirectory: $(BUILD_DIR)
       displayName: "Test with pytest and code coverage"
-
-    - script: |
-        echo "Deleting antenv"
-        deactivate
-        rm -rf antenv
-      workingDirectory: $(BUILD_DIR)
-      displayName: "Remove antenv before zip"
-
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
@@ -104,7 +95,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : python04152021-ml-project2'
+            displayName: 'Deploy Azure Web App : python04152021-ml-project'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)

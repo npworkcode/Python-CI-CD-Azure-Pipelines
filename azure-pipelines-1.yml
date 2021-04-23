@@ -53,6 +53,7 @@ stages:
       displayName: "Install requirements"
 
     - script: |
+        pip install pylint
         make lint
       workingDirectory: $(BUILD_DIR)
       displayName: "Lint with pylint"

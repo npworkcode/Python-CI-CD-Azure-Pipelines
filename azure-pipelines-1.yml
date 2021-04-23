@@ -9,7 +9,7 @@ trigger:
     - main
   paths:
     include:
-    - ./Flask_ML_Python_App-Azure_Pipelines/**.py
+    - ./Flask_ML_Python_App-Azure_Pipelines/*.py
 
 
 variables:

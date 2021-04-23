@@ -1,0 +1,1 @@
+az group create --location eastus2 --name mlPythonRG --tags project=2 type=devops language=python

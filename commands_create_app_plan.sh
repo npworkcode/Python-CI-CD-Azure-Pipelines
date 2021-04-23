@@ -1,0 +1,1 @@
+az appservice plan create --name pyAppPlan --resource-group mlPythonRG --is-linux --location eastus2 --number-of-workers 1 --sku FREE os=linux --tags type=appPlan workers=1

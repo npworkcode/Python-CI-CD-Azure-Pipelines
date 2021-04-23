@@ -31,6 +31,9 @@ variables:
   # Python version: 3.7
   pythonVersion: '3.7'
 
+  # Build Working Director
+  BUILD_DIR: './Flask_ML_Python_App-Azure_Pipelines'
+
 stages:
 - stage: Build
   displayName: Build stage
@@ -48,24 +51,24 @@ stages:
         python -m venv antenv
         source antenv/bin/activate
         make install
-      workingDirectory: $(projectRoot)
+      workingDirectory: $(BUILD_DIR)
       displayName: "Install requirements"
 
     - script: |
         make lint
-      workingDirectory: $(projectRoot)
+      workingDirectory: $(BUILD_DIR)
       displayName: "Lint with pylint"
 
     - script: |
         make test
-      workingDirectory: $(projectRoot)
+      workingDirectory: $(BUILD_DIR)
       displayName: "Test with pytest and code coverage"
 
     - script: |
         echo "Deleting antenv"
         deactivate
         rm -rf antenv
-      workingDirectory: $(projectRoot)
+      workingDirectory: $(BUILD_DIR)
       displayName: "Remove antenv before zip"
 
 

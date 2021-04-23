@@ -48,14 +48,11 @@ stages:
       displayName: 'Use Python $(pythonVersion)'
 
     - script: |
-        python -m venv antenv
-        source antenv/bin/activate
         make install
       workingDirectory: $(BUILD_DIR)
       displayName: "Install requirements"
 
     - script: |
-        pip install pylint 
         make lint
       workingDirectory: $(BUILD_DIR)
       displayName: "Lint with pylint"

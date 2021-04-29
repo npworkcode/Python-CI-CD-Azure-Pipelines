@@ -86,7 +86,7 @@ locust -f locusApp.py
 ### Locust load testing report
 ![Locust report](./locust/images/locust_report.jpg)
 ## Demo
-![Youtube link to demo of project] https://www.youtube.com/watch?v=qB16kKV-M_E
+![Youtube link to demo of project](https://www.youtube.com/watch?v=qB16kKV-M_E)
 
 ## Future Enhancements
 1) Deploy the app in a Docker Container and Automatically deploy to a Kubernetes Pod

@@ -1,6 +1,6 @@
 # Python-CI-CD-Azure-Pipelines
 
-## Demonstrate Continuous Integration & Continuous Deployment using GitHub and Azure Services
+## Demonstrate Continuous Integration & Continuous Deployment using GitHub and Azure Services and perform a Load Test on the deployed application using Locust
 
 ### Repository consists of 3 Projects
 1) [x] Project 1 - located in folder **/Hello_Python_App** demonstrates CI using GitHub Actions
